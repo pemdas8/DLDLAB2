@@ -28,6 +28,23 @@ module GenerateKeys (Key, SubKey1, SubKey2, SubKey3, SubKey4,
    output logic [47:0] SubKey15;
    output logic [47:0] SubKey16;
 
+   ShiftedC1= {C1[26:0],C1[27]};
+   ShiftedC2={C2[26:0], C1[27]};
+   ShiftedC3={C3[25:0], C3[27:26]};
+   ShiftedC4={C4[25:0], C4[27:26]};
+   ShiftedC5={C5[25:0], C5[27:26]};
+   ShiftedC6={C6[25:0], C6[27:26]};
+   ShiftedC7={C7[25:0], C7[27:26]};
+   ShiftedC8={C8[25:0], C8[27:26]};
+   ShiftedC9= {C9[26:0],C9[27]};
+   ShiftedC10={C10[25:0], C10[27:26]};
+   ShiftedC11={C11[25:0], C11[27:26]};
+   ShiftedC12={C12[25:0], C12[27:26]};
+   ShiftedC13={C13[25:0], C13[27:26]};
+   ShiftedC14={C14[25:0], C14[27:26]};
+   ShiftedC15={C15[25:0], C15[27:26]};
+   ShiftedC16= {C16[26:0],C16[27]};
+
 endmodule // GenerateKeys
 
 module PC1 (key, left_block, right_block);
@@ -38,6 +55,24 @@ module PC1 (key, left_block, right_block);
 
    logic [55:0]        out_block;
 
+   assign left_block[27]=key[64-57];
+   assign left_block[27]=key[64-49];
+   assign left_block[27]=key[64-41];
+   assign left_block[27]=key[64-33];
+   //see table for rest
+   assign right_block[27]=key[64-63];
+   assign right_block[27]=key[64-55];
+   assign right_block[27]=key[64-47];
+   assign right_block[27]=key[64-39];
+   assign right_block[27]=key[64-31];
+   assign right_block[27]=key[64-23];
+   assign right_block[27]=key[64-];
+   assign right_block[27]=key[64-];
+   assign right_block[27]=key[64-];
+   assign right_block[27]=key[64-];
+   assign right_block[27]=key[64-];
+   assign right_block[27]=key[64-];
+
 endmodule // PC1
 
 module PC2 (left_block, right_block, subkey);
@@ -45,6 +80,9 @@ module PC2 (left_block, right_block, subkey);
    input logic [27:0] left_block;
    input logic [27:0] right_block;
    output logic [47:0] subkey;
+
+   assign logic[55:0] inp_block;
+   inp_block = {left_block,right_block};
 
 endmodule // PC2
 
@@ -54,6 +92,10 @@ module SF (inp_block, out_block);
    input logic [31:0] inp_block;
    output logic [31:0] out_block;
 
+   assign out_block=inp_block[32-16];
+   assign out_block=inp_block[32-7];
+   //see table for rest 
+
 endmodule // SF
 
 // Expansion Function
@@ -61,6 +103,10 @@ module EF (inp_block, out_block);
 
    input logic [31:0] inp_block;
    output logic [47:0] out_block;
+
+   assign out_block = inp_block[32-32];
+   assign out_block = inp_block[32-1];
+   //see table for rest
 
 endmodule // EF
 
@@ -70,6 +116,12 @@ module feistel (inp_block, subkey, out_block);
    input logic [47:0]  subkey;
    output logic [31:0] out_block;
 
+   logic [47:0]exp_out;
+
+   EF exp1 (inp_block, exp_out);
+
+   assign out_block=exp_out ^ subkey;
+
 endmodule // Feistel
 
 // DES block round
@@ -78,6 +130,7 @@ module round (inp_block, subkey, out_block);
    input logic [63:0]  inp_block;
    input logic [47:0]  subkey;
    output logic [63:0] out_block;
+   
 
 endmodule // round1
 

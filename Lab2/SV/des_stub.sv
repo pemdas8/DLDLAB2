@@ -59,19 +59,59 @@ module PC1 (key, left_block, right_block);
    assign left_block[27]=key[64-49];
    assign left_block[27]=key[64-41];
    assign left_block[27]=key[64-33];
-   //see table for rest
+   assign left_block[27]=key[64-25];
+   assign left_block[27]=key[64-17];
+   assign left_block[27]=key[64-9];
+   assign left_block[27]=key[64-1];
+   assign left_block[27]=key[64-58];
+   assign left_block[27]=key[64-50];
+   assign left_block[27]=key[64-42];
+   assign left_block[27]=key[64-34];
+   assign left_block[27]=key[64-26];
+   assign left_block[27]=key[64-18];
+   assign left_block[27]=key[64-10];
+   assign left_block[27]=key[64-2];
+   assign left_block[27]=key[64-59];
+   assign left_block[27]=key[64-51];
+   assign left_block[27]=key[64-43];
+   assign left_block[27]=key[64-35];
+   assign left_block[27]=key[64-27];
+   assign left_block[27]=key[64-19];
+   assign left_block[27]=key[64-11];
+   assign left_block[27]=key[64-3];
+   assign left_block[27]=key[64-60];
+   assign left_block[27]=key[64-52];
+   assign left_block[27]=key[64-44];
+   assign left_block[27]=key[64-36];
+   
    assign right_block[27]=key[64-63];
    assign right_block[27]=key[64-55];
    assign right_block[27]=key[64-47];
    assign right_block[27]=key[64-39];
    assign right_block[27]=key[64-31];
    assign right_block[27]=key[64-23];
-   assign right_block[27]=key[64-];
-   assign right_block[27]=key[64-];
-   assign right_block[27]=key[64-];
-   assign right_block[27]=key[64-];
-   assign right_block[27]=key[64-];
-   assign right_block[27]=key[64-];
+   assign right_block[27]=key[64-15];
+   assign right_block[27]=key[64-7];
+   assign right_block[27]=key[64-62];
+   assign right_block[27]=key[64-54];
+   assign right_block[27]=key[64-46];
+   assign right_block[27]=key[64-38];
+   assign right_block[27]=key[64-30];
+   assign right_block[27]=key[64-22];
+   assign right_block[27]=key[64-14];
+   assign right_block[27]=key[64-6];
+   assign right_block[27]=key[64-61];
+   assign right_block[27]=key[64-53];
+   assign right_block[27]=key[64-45];
+   assign right_block[27]=key[64-37];
+   assign right_block[27]=key[64-29];
+   assign right_block[27]=key[64-21];
+   assign right_block[27]=key[64-13];
+   assign right_block[27]=key[64-5];
+   assign right_block[27]=key[64-28];
+   assign right_block[27]=key[64-20];
+   assign right_block[27]=key[64-12];
+   assign right_block[27]=key[64-4];   
 
 endmodule // PC1
 
@@ -94,7 +134,36 @@ module SF (inp_block, out_block);
 
    assign out_block=inp_block[32-16];
    assign out_block=inp_block[32-7];
-   //see table for rest 
+   assign out_block=inp_block[32-20];
+   assign out_block=inp_block[32-21];
+   assign out_block=inp_block[32-29];
+   assign out_block=inp_block[32-12];
+   assign out_block=inp_block[32-28];
+   assign out_block=inp_block[32-17];
+   assign out_block=inp_block[32-1];
+   assign out_block=inp_block[32-15];
+   assign out_block=inp_block[32-23];
+   assign out_block=inp_block[32-26];
+   assign out_block=inp_block[32-5];
+   assign out_block=inp_block[32-18];
+   assign out_block=inp_block[32-31];
+   assign out_block=inp_block[32-10];
+   assign out_block=inp_block[32-2];
+   assign out_block=inp_block[32-8];
+   assign out_block=inp_block[32-24];
+   assign out_block=inp_block[32-14];
+   assign out_block=inp_block[32-32];
+   assign out_block=inp_block[32-27];
+   assign out_block=inp_block[32-3];
+   assign out_block=inp_block[32-9];
+   assign out_block=inp_block[32-19];
+   assign out_block=inp_block[32-13];
+   assign out_block=inp_block[32-30];
+   assign out_block=inp_block[32-6];
+   assign out_block=inp_block[32-22];
+   assign out_block=inp_block[32-11];
+   assign out_block=inp_block[32-4];
+   assign out_block=inp_block[32-25];
 
 endmodule // SF
 
@@ -106,7 +175,52 @@ module EF (inp_block, out_block);
 
    assign out_block = inp_block[32-32];
    assign out_block = inp_block[32-1];
-   //see table for rest
+   assign out_block = inp_block[32-2];
+   assign out_block = inp_block[32-3];
+   assign out_block = inp_block[32-4];
+   assign out_block = inp_block[32-5];
+   assign out_block = inp_block[32-4];
+   assign out_block = inp_block[32-5];
+   assign out_block = inp_block[32-6];
+   assign out_block = inp_block[32-7];
+   assign out_block = inp_block[32-8];
+   assign out_block = inp_block[32-9];
+   assign out_block = inp_block[32-8];
+   assign out_block = inp_block[32-9];
+   assign out_block = inp_block[32-10];
+   assign out_block = inp_block[32-11];
+   assign out_block = inp_block[32-12];
+   assign out_block = inp_block[32-13];
+   assign out_block = inp_block[32-12];
+   assign out_block = inp_block[32-13];
+   assign out_block = inp_block[32-14];
+   assign out_block = inp_block[32-15];
+   assign out_block = inp_block[32-16];
+   assign out_block = inp_block[32-17];
+   assign out_block = inp_block[32-16];
+   assign out_block = inp_block[32-17];
+   assign out_block = inp_block[32-18];
+   assign out_block = inp_block[32-19];
+   assign out_block = inp_block[32-20];
+   assign out_block = inp_block[32-21];
+   assign out_block = inp_block[32-20];
+   assign out_block = inp_block[32-21];
+   assign out_block = inp_block[32-22];
+   assign out_block = inp_block[32-23];
+   assign out_block = inp_block[32-24];
+   assign out_block = inp_block[32-25];
+   assign out_block = inp_block[32-24];
+   assign out_block = inp_block[32-25];
+   assign out_block = inp_block[32-26];
+   assign out_block = inp_block[32-27];
+   assign out_block = inp_block[32-28];
+   assign out_block = inp_block[32-29];
+   assign out_block = inp_block[32-28];
+   assign out_block = inp_block[32-29];
+   assign out_block = inp_block[32-30];
+   assign out_block = inp_block[32-31];
+   assign out_block = inp_block[32-32];
+   assign out_block = inp_block[32-1];
 
 endmodule // EF
 

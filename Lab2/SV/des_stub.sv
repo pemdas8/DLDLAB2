@@ -28,22 +28,7 @@ module GenerateKeys (Key, SubKey1, SubKey2, SubKey3, SubKey4,
    output logic [47:0] SubKey15;
    output logic [47:0] SubKey16;
 
-   ShiftedC1= {C1[26:0],C1[27]};
-   ShiftedC2={C2[26:0], C1[27]};
-   ShiftedC3={C3[25:0], C3[27:26]};
-   ShiftedC4={C4[25:0], C4[27:26]};
-   ShiftedC5={C5[25:0], C5[27:26]};
-   ShiftedC6={C6[25:0], C6[27:26]};
-   ShiftedC7={C7[25:0], C7[27:26]};
-   ShiftedC8={C8[25:0], C8[27:26]};
-   ShiftedC9= {C9[26:0],C9[27]};
-   ShiftedC10={C10[25:0], C10[27:26]};
-   ShiftedC11={C11[25:0], C11[27:26]};
-   ShiftedC12={C12[25:0], C12[27:26]};
-   ShiftedC13={C13[25:0], C13[27:26]};
-   ShiftedC14={C14[25:0], C14[27:26]};
-   ShiftedC15={C15[25:0], C15[27:26]};
-   ShiftedC16= {C16[26:0],C16[27]};
+   
 
 endmodule // GenerateKeys
 
@@ -55,6 +40,7 @@ module PC1 (key, left_block, right_block);
 
    logic [55:0]        out_block;
 
+   //Left Block
    assign left_block[27]=key[64-57];
    assign left_block[27]=key[64-49];
    assign left_block[27]=key[64-41];
@@ -84,6 +70,7 @@ module PC1 (key, left_block, right_block);
    assign left_block[27]=key[64-44];
    assign left_block[27]=key[64-36];
    
+   //Right Block
    assign right_block[27]=key[64-63];
    assign right_block[27]=key[64-55];
    assign right_block[27]=key[64-47];
@@ -123,6 +110,58 @@ module PC2 (left_block, right_block, subkey);
 
    assign logic[55:0] inp_block;
    inp_block = {left_block,right_block};
+
+   assign subkey=inp_block[55-14];
+   assign subkey=inp_block[55-17];
+   assign subkey=inp_block[55-11];
+   assign subkey=inp_block[55-24];
+   assign subkey=inp_block[55-1];
+   assign subkey=inp_block[55-5];
+   assign subkey=inp_block[55-3];
+   assign subkey=inp_block[55-28];
+   assign subkey=inp_block[55-15];
+   assign subkey=inp_block[55-6];
+   assign subkey=inp_block[55-21];
+   assign subkey=inp_block[55-10];
+   assign subkey=inp_block[55-23];
+   assign subkey=inp_block[55-19];
+   assign subkey=inp_block[55-12];
+   assign subkey=inp_block[55-4];
+   assign subkey=inp_block[55-26];
+   assign subkey=inp_block[55-8];
+   assign subkey=inp_block[55-16];
+   assign subkey=inp_block[55-7];
+   assign subkey=inp_block[55-27];
+   assign subkey=inp_block[55-20];
+   assign subkey=inp_block[55-13];
+   assign subkey=inp_block[55-2];
+   assign subkey=inp_block[55-41];
+   assign subkey=inp_block[55-52];
+   assign subkey=inp_block[55-31];
+   assign subkey=inp_block[55-37];
+   assign subkey=inp_block[55-47];
+   assign subkey=inp_block[55-55];
+   assign subkey=inp_block[55-30];
+   assign subkey=inp_block[55-40];
+   assign subkey=inp_block[55-51];
+   assign subkey=inp_block[55-45];
+   assign subkey=inp_block[55-33];
+   assign subkey=inp_block[55-33];
+   assign subkey=inp_block[55-48];
+   assign subkey=inp_block[55-44];
+   assign subkey=inp_block[55-49];
+   assign subkey=inp_block[55-39];
+   assign subkey=inp_block[55-56];
+   assign subkey=inp_block[55-34];
+   assign subkey=inp_block[55-53];
+   assign subkey=inp_block[55-46];
+   assign subkey=inp_block[55-42];
+   assign subkey=inp_block[55-50];
+   assign subkey=inp_block[55-36];
+   assign subkey=inp_block[55-29];
+   assign subkey=inp_block[55-32];
+
+
 
 endmodule // PC2
 
@@ -231,10 +270,21 @@ module feistel (inp_block, subkey, out_block);
    output logic [31:0] out_block;
 
    logic [47:0]exp_out;
-
-   EF exp1 (inp_block, exp_out);
-
+   EF exp1(inp_block, exp_out);
    assign out_block=exp_out ^ subkey;
+
+   logic[47:0]			sbox_pre;
+   assign inp_bits = sbox_pre[5:0];
+   assign inp_bits = sbox_pre[11:6];
+   assign inp_bits = sbox_pre[17:12];
+   assign inp_bits = sbox_pre[23:28];
+   assign inp_bits = sbox_pre[29:34];
+   assign inp_bits = sbox_pre[35:40];
+   assign inp_bits = sbox_pre[41:36];
+   assign inp_bits = sbox_pre[47:42];
+
+   assign logic [47:0]sbox_out;
+   sbox_out = {sbox_pre};
 
 endmodule // Feistel
 
@@ -244,6 +294,8 @@ module round (inp_block, subkey, out_block);
    input logic [63:0]  inp_block;
    input logic [47:0]  subkey;
    output logic [63:0] out_block;
+
+   
    
 
 endmodule // round1
@@ -1074,5 +1126,3 @@ module DES (input logic [63:0] key, input logic [63:0] plaintext,
    FP FP({r16_out[31:0], r16_out[63:32]}, ciphertext);
    
 endmodule // DES
-
-

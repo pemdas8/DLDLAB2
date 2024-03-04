@@ -273,18 +273,24 @@ module feistel (inp_block, subkey, out_block);
    EF exp1(inp_block, exp_out);
    assign out_block=exp_out ^ subkey;
 
-   logic[47:0]			sbox_pre;
-   assign inp_bits = sbox_pre[5:0];
-   assign inp_bits = sbox_pre[11:6];
-   assign inp_bits = sbox_pre[17:12];
-   assign inp_bits = sbox_pre[23:28];
-   assign inp_bits = sbox_pre[29:34];
-   assign inp_bits = sbox_pre[35:40];
-   assign inp_bits = sbox_pre[41:36];
-   assign inp_bits = sbox_pre[47:42];
+   S1_Box sbox1(inp_bits(XOR1[47:42]),out_bits(line2[31:28]));
+   S2_Box sbox2(inp_bits(XOR2[41:36]), out_bits(line3[27:24]));
+   S3_Box sbox3(inp_bits(XOR3[35:40]), out_bits(line4[23:20]));
+   S4_Box sbox4(inp_bits(XOR4[29:34]), out_bits(line5[19:16]));
+   S5_Box sbox5(inp_bits(XOR5[23:28]), out_bits(line6[15:12]));
+   S6_Box sbox6(inp_bits(XOR6[17:12]), out_bits(line7[11:8]));
+   S7_Box sbox7(inp_bits(XOR7[11:6]), out_bits(line8[7:4]));
+   S8_Box sbox8(inp_bits(XOR8[5:0]), out_bits(line9[3:0]));
 
-   assign logic [47:0]sbox_out;
-   sbox_out = {sbox_pre};
+   logic[47:0]			sbox_pre;
+   assign sbox_pre = sbox1[5:0];
+   assign sbox_pre = sbox2[11:6];
+   assign sbox_pre = sbox3[17:12];
+   assign sbox_pre = sbox4[23:28];
+   assign sbox_pre = sbox5[29:34];
+   assign sbox_pre = sbox6[35:40];
+   assign sbox_pre = sbox7[41:36];
+   assign sbox_pre = sbox8[47:42];
 
 endmodule // Feistel
 

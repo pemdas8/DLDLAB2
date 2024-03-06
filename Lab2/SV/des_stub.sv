@@ -46,8 +46,8 @@ module GenerateKeys (Key, SubKey1, SubKey2, SubKey3, SubKey4,
    logic [27:0]	A15,B15;
    logic [27:0]	A16,B16;
 
-   PC1 pcin(key,left_block,right_block);
-
+   PC1 pc1round(key,left_block,right_block);
+   
    assign A1 = {left_block[26:0], left_block[27]};
    assign B1 = {right_block[26:0], right_block[27]};
 
@@ -71,8 +71,60 @@ module GenerateKeys (Key, SubKey1, SubKey2, SubKey3, SubKey4,
    assign A5 = {A4[25:0], A4[27:26]};
    assign B5 = {B4[25:0], B4[27:26]};
 
-   //Fill in rest of rounds, refer to table for single or double shift
+   PC2 round5(A5,B5,SubKey5);
+
+   assign A6 = {A5[25:0], A5[27:26]};
+   assign B6 = {B5[25:0], B5[27:26]};
+
+   PC2 round6(A6,B6,Subkey6);
+
+   assign A7 = {A6[25:0], A6[27:26]};
+   assign B7 = {B6[25:0], B6[27:26]};
+
+   PC2 round7(A7,B7,Subkey7);
+
+   assign A8 = {A7[25:0], A7[27:26]};
+   assign B8 = {B7[25:0], B7[27:26]};
+
+   PC2 round8(A8,B8,Subkey8);
    
+   assign A9 = {A8[26:0], A8[27]};
+   assign B9 = {B8[26:0], B8[27]};
+
+   PC2 round8(A9,B9,Subkey9);
+
+   assign A10 = {A9[25:0], A8[27:26]};
+   assign B10 = {B9[25:0], B8[27:26]};
+
+   PC2 round9(A10,B10,Subkey10);
+
+   assign A11 = {A10[25:0], A10[27:26]};
+   assign B11 = {B10[25:0], B10[27:26]};
+
+   PC2 round10(A11,B11,Subkey11);
+
+   assign A12 = {A11[25:0], A11[27:26]};
+   assign B12 = {B11[25:0], B11[27:26]};
+
+   PC2 round11(A12,B12,Subkey12);
+
+   assign A13 = {A12[25:0], A12[27:26]};
+   assign B13 = {B12[25:0], B12[27:26]};
+
+   PC2 round12(A13,B13,Subkey13);
+
+   assign A14 = {A13[25:0], A13[27:26]};
+   assign B14 = {B13[25:0], B13[27:26]};
+
+   PC2 round13(A14,B14,Subkey14);
+
+   assign A15 = {A14[25:0], A14[27:26]};
+   assign B15 = {B14[25:0], B14[27:26]};
+
+   PC2 round14(A15,B15,Subkey15);
+
+   assign A16 = {A15[26:0], A15[27]};
+   assign B16 = {B15[26:0], B15[27]};
 
 
 
@@ -84,67 +136,65 @@ module PC1 (key, left_block, right_block);
    output logic [27:0] left_block;
    output logic [27:0] right_block;
 
-   logic [55:0]        out_block;
-
    //Left Block
    assign left_block[27]=key[64-57];
-   assign left_block[27]=key[64-49];
-   assign left_block[27]=key[64-41];
-   assign left_block[27]=key[64-33];
-   assign left_block[27]=key[64-25];
-   assign left_block[27]=key[64-17];
-   assign left_block[27]=key[64-9];
-   assign left_block[27]=key[64-1];
-   assign left_block[27]=key[64-58];
-   assign left_block[27]=key[64-50];
-   assign left_block[27]=key[64-42];
-   assign left_block[27]=key[64-34];
-   assign left_block[27]=key[64-26];
-   assign left_block[27]=key[64-18];
-   assign left_block[27]=key[64-10];
-   assign left_block[27]=key[64-2];
-   assign left_block[27]=key[64-59];
-   assign left_block[27]=key[64-51];
-   assign left_block[27]=key[64-43];
-   assign left_block[27]=key[64-35];
-   assign left_block[27]=key[64-27];
-   assign left_block[27]=key[64-19];
-   assign left_block[27]=key[64-11];
-   assign left_block[27]=key[64-3];
-   assign left_block[27]=key[64-60];
-   assign left_block[27]=key[64-52];
-   assign left_block[27]=key[64-44];
-   assign left_block[27]=key[64-36];
+   assign left_block[26]=key[64-49];
+   assign left_block[25]=key[64-41];
+   assign left_block[24]=key[64-33];
+   assign left_block[23]=key[64-25];
+   assign left_block[22]=key[64-17];
+   assign left_block[21]=key[64-9];
+   assign left_block[20]=key[64-1];
+   assign left_block[19]=key[64-58];
+   assign left_block[18]=key[64-50];
+   assign left_block[17]=key[64-42];
+   assign left_block[16]=key[64-34];
+   assign left_block[15]=key[64-26];
+   assign left_block[14]=key[64-18];
+   assign left_block[13]=key[64-10];
+   assign left_block[12]=key[64-2];
+   assign left_block[11]=key[64-59];
+   assign left_block[10]=key[64-51];
+   assign left_block[9]=key[64-43];
+   assign left_block[8]=key[64-35];
+   assign left_block[7]=key[64-27];
+   assign left_block[6]=key[64-19];
+   assign left_block[5]=key[64-11];
+   assign left_block[4]=key[64-3];
+   assign left_block[3]=key[64-60];
+   assign left_block[2]=key[64-52];
+   assign left_block[1]=key[64-44];
+   assign left_block[0]=key[64-36];
    
    //Right Block
    assign right_block[27]=key[64-63];
-   assign right_block[27]=key[64-55];
-   assign right_block[27]=key[64-47];
-   assign right_block[27]=key[64-39];
-   assign right_block[27]=key[64-31];
-   assign right_block[27]=key[64-23];
-   assign right_block[27]=key[64-15];
-   assign right_block[27]=key[64-7];
-   assign right_block[27]=key[64-62];
-   assign right_block[27]=key[64-54];
-   assign right_block[27]=key[64-46];
-   assign right_block[27]=key[64-38];
-   assign right_block[27]=key[64-30];
-   assign right_block[27]=key[64-22];
-   assign right_block[27]=key[64-14];
-   assign right_block[27]=key[64-6];
-   assign right_block[27]=key[64-61];
-   assign right_block[27]=key[64-53];
-   assign right_block[27]=key[64-45];
-   assign right_block[27]=key[64-37];
-   assign right_block[27]=key[64-29];
-   assign right_block[27]=key[64-21];
-   assign right_block[27]=key[64-13];
-   assign right_block[27]=key[64-5];
-   assign right_block[27]=key[64-28];
-   assign right_block[27]=key[64-20];
-   assign right_block[27]=key[64-12];
-   assign right_block[27]=key[64-4];   
+   assign right_block[26]=key[64-55];
+   assign right_block[25]=key[64-47];
+   assign right_block[24]=key[64-39];
+   assign right_block[23]=key[64-31];
+   assign right_block[22]=key[64-23];
+   assign right_block[21]=key[64-15];
+   assign right_block[20]=key[64-7];
+   assign right_block[19]=key[64-62];
+   assign right_block[18]=key[64-54];
+   assign right_block[17]=key[64-46];
+   assign right_block[16]=key[64-38];
+   assign right_block[15]=key[64-30];
+   assign right_block[14]=key[64-22];
+   assign right_block[13]=key[64-14];
+   assign right_block[12]=key[64-6];
+   assign right_block[11]=key[64-61];
+   assign right_block[10]=key[64-53];
+   assign right_block[9]=key[64-45];
+   assign right_block[8]=key[64-37];
+   assign right_block[7]=key[64-29];
+   assign right_block[6]=key[64-21];
+   assign right_block[5]=key[64-13];
+   assign right_block[4]=key[64-5];
+   assign right_block[3]=key[64-28];
+   assign right_block[2]=key[64-20];
+   assign right_block[1]=key[64-12];
+   assign right_block[0]=key[64-4];   
 
 endmodule // PC1
 
@@ -154,58 +204,58 @@ module PC2 (left_block, right_block, subkey);
    input logic [27:0] right_block;
    output logic [47:0] subkey;
 
-   assign logic[55:0] inp_block;
-   inp_block = {left_block,right_block};
+   logic[55:0] pc2_in;
+   assign pc2_in = {left_block,right_block};
 
-   assign subkey=inp_block[55-14];
-   assign subkey=inp_block[55-17];
-   assign subkey=inp_block[55-11];
-   assign subkey=inp_block[55-24];
-   assign subkey=inp_block[55-1];
-   assign subkey=inp_block[55-5];
-   assign subkey=inp_block[55-3];
-   assign subkey=inp_block[55-28];
-   assign subkey=inp_block[55-15];
-   assign subkey=inp_block[55-6];
-   assign subkey=inp_block[55-21];
-   assign subkey=inp_block[55-10];
-   assign subkey=inp_block[55-23];
-   assign subkey=inp_block[55-19];
-   assign subkey=inp_block[55-12];
-   assign subkey=inp_block[55-4];
-   assign subkey=inp_block[55-26];
-   assign subkey=inp_block[55-8];
-   assign subkey=inp_block[55-16];
-   assign subkey=inp_block[55-7];
-   assign subkey=inp_block[55-27];
-   assign subkey=inp_block[55-20];
-   assign subkey=inp_block[55-13];
-   assign subkey=inp_block[55-2];
-   assign subkey=inp_block[55-41];
-   assign subkey=inp_block[55-52];
-   assign subkey=inp_block[55-31];
-   assign subkey=inp_block[55-37];
-   assign subkey=inp_block[55-47];
-   assign subkey=inp_block[55-55];
-   assign subkey=inp_block[55-30];
-   assign subkey=inp_block[55-40];
-   assign subkey=inp_block[55-51];
-   assign subkey=inp_block[55-45];
-   assign subkey=inp_block[55-33];
-   assign subkey=inp_block[55-33];
-   assign subkey=inp_block[55-48];
-   assign subkey=inp_block[55-44];
-   assign subkey=inp_block[55-49];
-   assign subkey=inp_block[55-39];
-   assign subkey=inp_block[55-56];
-   assign subkey=inp_block[55-34];
-   assign subkey=inp_block[55-53];
-   assign subkey=inp_block[55-46];
-   assign subkey=inp_block[55-42];
-   assign subkey=inp_block[55-50];
-   assign subkey=inp_block[55-36];
-   assign subkey=inp_block[55-29];
-   assign subkey=inp_block[55-32];
+   assign subkey[48]=pc2_in[55-14];  //fill in each subkey with specified bit
+   assign subkey=pc2_in[55-17];
+   assign subkey=pc2_in[55-11];
+   assign subkey=pc2_in[55-24];
+   assign subkey=pc2_in[55-1];
+   assign subkey=pc2_in[55-5];
+   assign subkey=pc2_in[55-3];
+   assign subkey=pc2_in[55-28];
+   assign subkey=pc2_in[55-15];
+   assign subkey=pc2_in[55-6];
+   assign subkey=pc2_in[55-21];
+   assign subkey=pc2_in[55-10];
+   assign subkey=pc2_in[55-23];
+   assign subkey=pc2_in[55-19];
+   assign subkey=pc2_in[55-12];
+   assign subkey=pc2_in[55-4];
+   assign subkey=pc2_in[55-26];
+   assign subkey=pc2_in[55-8];
+   assign subkey=pc2_in[55-16];
+   assign subkey=pc2_in[55-7];
+   assign subkey=pc2_in[55-27];
+   assign subkey=pc2_in[55-20];
+   assign subkey=pc2_in[55-13];
+   assign subkey=pc2_in[55-2];
+   assign subkey=pc2_in[55-41];
+   assign subkey=pc2_in[55-52];
+   assign subkey=pc2_in[55-31];
+   assign subkey=pc2_in[55-37];
+   assign subkey=pc2_in[55-47];
+   assign subkey=pc2_in[55-55];
+   assign subkey=pc2_in[55-30];
+   assign subkey=pc2_in[55-40];
+   assign subkey=pc2_in[55-51];
+   assign subkey=pc2_in[55-45];
+   assign subkey=pc2_in[55-33];
+   assign subkey=pc2_in[55-33];
+   assign subkey=pc2_in[55-48];
+   assign subkey=pc2_in[55-44];
+   assign subkey=pc2_in[55-49];
+   assign subkey=pc2_in[55-39];
+   assign subkey=pc2_in[55-56];
+   assign subkey=pc2_in[55-34];
+   assign subkey=pc2_in[55-53];
+   assign subkey=pc2_in[55-46];
+   assign subkey=pc2_in[55-42];
+   assign subkey=pc2_in[55-50];
+   assign subkey=pc2_in[55-36];
+   assign subkey=pc2_in[55-29];
+   assign subkey=pc2_in[55-32];
 
 
 
@@ -217,38 +267,41 @@ module SF (inp_block, out_block);
    input logic [31:0] inp_block;
    output logic [31:0] out_block;
 
-   assign out_block=inp_block[32-16];
-   assign out_block=inp_block[32-7];
-   assign out_block=inp_block[32-20];
-   assign out_block=inp_block[32-21];
-   assign out_block=inp_block[32-29];
-   assign out_block=inp_block[32-12];
-   assign out_block=inp_block[32-28];
-   assign out_block=inp_block[32-17];
-   assign out_block=inp_block[32-1];
-   assign out_block=inp_block[32-15];
-   assign out_block=inp_block[32-23];
-   assign out_block=inp_block[32-26];
-   assign out_block=inp_block[32-5];
-   assign out_block=inp_block[32-18];
-   assign out_block=inp_block[32-31];
-   assign out_block=inp_block[32-10];
-   assign out_block=inp_block[32-2];
-   assign out_block=inp_block[32-8];
-   assign out_block=inp_block[32-24];
-   assign out_block=inp_block[32-14];
-   assign out_block=inp_block[32-32];
-   assign out_block=inp_block[32-27];
-   assign out_block=inp_block[32-3];
-   assign out_block=inp_block[32-9];
-   assign out_block=inp_block[32-19];
-   assign out_block=inp_block[32-13];
-   assign out_block=inp_block[32-30];
-   assign out_block=inp_block[32-6];
-   assign out_block=inp_block[32-22];
-   assign out_block=inp_block[32-11];
-   assign out_block=inp_block[32-4];
-   assign out_block=inp_block[32-25];
+   logic [31:0]sf_in;
+   feistel sf1(inp_block, sf_in);
+
+   assign out_block=sf_in[32-16];  //fill out out_block with specified bit to each assignment
+   assign out_block=sf_in[32-7];
+   assign out_block=sf_in[32-20];
+   assign out_block=sf_in[32-21];
+   assign out_block=sf_in[32-29];
+   assign out_block=sf_in[32-12];
+   assign out_block=sf_in[32-28];
+   assign out_block=sf_in[32-17];
+   assign out_block=sf_in[32-1];
+   assign out_block=sf_in[32-15];
+   assign out_block=sf_in[32-23];
+   assign out_block=sf_in[32-26];
+   assign out_block=sf_in[32-5];
+   assign out_block=sf_in[32-18];
+   assign out_block=sf_in[32-31];
+   assign out_block=sf_in[32-10];
+   assign out_block=sf_in[32-2];
+   assign out_block=sf_in[32-8];
+   assign out_block=sf_in[32-24];
+   assign out_block=sf_in[32-14];
+   assign out_block=sf_in[32-32];
+   assign out_block=sf_in[32-27];
+   assign out_block=sf_in[32-3];
+   assign out_block=sf_in[32-9];
+   assign out_block=sf_in[32-19];
+   assign out_block=sf_in[32-13];
+   assign out_block=sf_in[32-30];
+   assign out_block=sf_in[32-6];
+   assign out_block=sf_in[32-22];
+   assign out_block=sf_in[32-11];
+   assign out_block=sf_in[32-4];
+   assign out_block=sf_in[32-25];
 
 endmodule // SF
 
@@ -320,16 +373,16 @@ module feistel (inp_block, subkey, out_block);
    logic [31:0]s_out;
 
    EF exp1(inp_block, exp_out);
-   assign XOR1=exp_out ^ subkey;
+   assign XOR1 = exp_out ^ subkey;
 
-   S1_Box sbox1(XOR1[47:42]), s_out[31:28];
-   S2_Box sbox2(XOR1[41:36]), s_out[27:24];
-   S3_Box sbox3(XOR1[35:40]), s_out[23:20];
-   S4_Box sbox4(XOR1[29:34]), s_out[19:16];
-   S5_Box sbox5(XOR1[23:28]), s_out[15:12];
-   S6_Box sbox6(XOR1[17:12]), s_out[11:8];
-   S7_Box sbox7(XOR1[11:6]), s_out[7:4];
-   S8_Box sbox8(XOR1[5:0]), s_out[3:0];
+   S1_Box sbox1(XOR1[47:42], s_out[31:28]);
+   S2_Box sbox2(XOR1[41:36], s_out[27:24]);
+   S3_Box sbox3(XOR1[35:30], s_out[23:20]);
+   S4_Box sbox4(XOR1[29:24], s_out[19:16]);
+   S5_Box sbox5(XOR1[23:18], s_out[15:12]);
+   S6_Box sbox6(XOR1[17:12], s_out[11:8]);
+   S7_Box sbox7(XOR1[11:6], s_out[7:4]);
+   S8_Box sbox8(XOR1[5:0], s_out[3:0]);
 
    SF sf1(s_out, out_block);
 
@@ -342,11 +395,20 @@ module round (inp_block, subkey, out_block);
    input logic [47:0]  subkey;
    output logic [63:0] out_block;
 
-   logic [27:0]left_block;
-   logic [27:0]right_block;
+   logic [31:0]left_block;
+   logic [31:0]right_block;
+   logic [63:0]XOR2;
+   logic [31:0]feistel_out;
 
-   
-   
+   assign left_block = inp_block[63:32];
+   assign right_block = inp_block[31:0];
+
+   assign out_block[63:32]= right_block;
+   feistel round_in(right_block, subkey, feistel_out);
+   assign XOR2 = left_block ^ feistel_out;
+   assign out_block[31:0]= XOR2;
+
+   PC2 pc2_in1(XOR2, out_block);
 
 endmodule // round1
 
@@ -1129,8 +1191,23 @@ module DES (input logic [63:0] key, input logic [63:0] plaintext,
    logic [47:0] 	SubKey13, SubKey14, SubKey15, SubKey16;
 
    logic [63:0] 	ip_out;   
-   logic [63:0] 	r16_out = 64'h0;   
-   
+   logic [63:0] 	r1_out;
+   logic [63:0]		r2_out;
+   logic [63:0]		r3_out;
+   logic [63:0] 	r4_out;
+   logic [63:0]		r5_out;
+   logic [63:0]		r6_out;
+   logic [63:0] 	r7_out;
+   logic [63:0]		r8_out;
+   logic [63:0]		r9_out;
+   logic [63:0] 	r10_out;
+   logic [63:0]		r11_out;
+   logic [63:0]		r12_out;
+   logic [63:0] 	r13_out;
+   logic [63:0]		r14_out;
+   logic [63:0]		r15_out;
+   logic [63:0] 	r16_out;   
+ 
    // SubKey generation
    GenerateKeys k1 (key, SubKey1, SubKey2, SubKey3, SubKey4,
 		    SubKey5, SubKey6, SubKey7, SubKey8,
@@ -1141,36 +1218,37 @@ module DES (input logic [63:0] key, input logic [63:0] plaintext,
    // Initial Permutation (IP)
    IP b1 (plaintext, ip_out);
    // round 1
-   
+   round r1(ip_out, SubKey1, r1_out);
    // round 2
-   
+   round r2(r1_out, SubKey2, r2_out);
    // round 3
-   
-   // round 4
-   
-   // round 5
-   
-   // round 6
-   
-   // round 7
-   
-   // round 8
-   
+   round r3(r2_out, SubKey3, r3_out);
+   // round K
+   round r4(r3_out, SubKey4, r4_out);   
+   // round K
+   round r5(r4_out, SubKey5, r5_out);
+   // round K
+   round r6(r5_out, SubKey6, r6_out);
+   // round K
+   round r7(r6_out, SubKey7, r7_out);
+   // round K
+   round r8(r7_out, SubKey8, r8_out);
    // round 9
-   
+   round r9(r8_out, SubKey9, r9_out);
    // round 10
-   
+   round r10(r9_out, SubKey10, r10_out);
    // round 11
-   
+   round r11(r10_out, SubKey11, r11_out);
    // round 12
-   
+   round r12(r11_out, SubKey12, r12_out);
    // round 13
-   
+   round r13(r12_out, SubKey13, r13_out);
    // round 14
-   
+   round r14(r13_out, SubKey14, r14_out);
    // round 15
-   
+   round r15(r14_out, SubKey15, r15_out);
    // round 16
+   round r16(r15_out, SubKey16, r16_out);
 
    // Final Permutation (IP^{-1}) (swap output of round16)
    FP FP({r16_out[31:0], r16_out[63:32]}, ciphertext);

@@ -28,7 +28,53 @@ module GenerateKeys (Key, SubKey1, SubKey2, SubKey3, SubKey4,
    output logic [47:0] SubKey15;
    output logic [47:0] SubKey16;
 
+   logic [27:0]left_block, [27:0]right_block;
+   logic [27:0] A1,B1;
+   logic [27:0] A2,B2;
+   logic [27:0] A3,B3;
+   logic [27:0] A4,B4;
+   logic [27:0] A5,B5;
+   logic [27:0] A6,B6;
+   logic [27:0]	A7,B7;
+   logic [27:0] A8,B8;
+   logic [27:0] A9,B9;
+   logic [27:0] A10,B10;
+   logic [27:0] A11,B11;
+   logic [27:0] A12,B12;
+   logic [27:0] A13,B13;
+   logic [27:0]	A14,B14;
+   logic [27:0]	A15,B15;
+   logic [27:0]	A16,B16;
+
+   PC1 pcin(key,left_block,right_block);
+
+   assign A1 = {left_block[26:0], left_block[27]};
+   assign B1 = {right_block[26:0], right_block[27]};
+
+   PC2 round1(A1,B1,SubKey1);
+
+   assign A2 = {A1[26:0], A1[27]};
+   assign B2 = {B1[26:0], B1[27]};
+
+   PC2 round2(A2,B2,SubKey2);
+
+   assign A3 = {A2[25:0], A2[27:26]};
+   assign B3 = {B2[25:0], B2[27:26]};
+
+   PC2 round3(A3,B3,SubKey3);
+
+   assign A4 = {A3[25:0], A3[27:26]};
+   assign B4 = {B3[25:0], B3[27:26]};
+
+   PC2 round4(A4,B4,SubKey4);
+
+   assign A5 = {A4[25:0], A4[27:26]};
+   assign B5 = {B4[25:0], B4[27:26]};
+
+   //Fill in rest of rounds, refer to table for single or double shift
    
+
+
 
 endmodule // GenerateKeys
 
@@ -270,27 +316,22 @@ module feistel (inp_block, subkey, out_block);
    output logic [31:0] out_block;
 
    logic [47:0]exp_out;
+   logic [47:0]XOR1;
+   logic [31:0]s_out;
+
    EF exp1(inp_block, exp_out);
-   assign out_block=exp_out ^ subkey;
+   assign XOR1=exp_out ^ subkey;
 
-   S1_Box sbox1(inp_bits(XOR1[47:42]),out_bits(line2[31:28]));
-   S2_Box sbox2(inp_bits(XOR2[41:36]), out_bits(line3[27:24]));
-   S3_Box sbox3(inp_bits(XOR3[35:40]), out_bits(line4[23:20]));
-   S4_Box sbox4(inp_bits(XOR4[29:34]), out_bits(line5[19:16]));
-   S5_Box sbox5(inp_bits(XOR5[23:28]), out_bits(line6[15:12]));
-   S6_Box sbox6(inp_bits(XOR6[17:12]), out_bits(line7[11:8]));
-   S7_Box sbox7(inp_bits(XOR7[11:6]), out_bits(line8[7:4]));
-   S8_Box sbox8(inp_bits(XOR8[5:0]), out_bits(line9[3:0]));
+   S1_Box sbox1(XOR1[47:42]), s_out[31:28];
+   S2_Box sbox2(XOR1[41:36]), s_out[27:24];
+   S3_Box sbox3(XOR1[35:40]), s_out[23:20];
+   S4_Box sbox4(XOR1[29:34]), s_out[19:16];
+   S5_Box sbox5(XOR1[23:28]), s_out[15:12];
+   S6_Box sbox6(XOR1[17:12]), s_out[11:8];
+   S7_Box sbox7(XOR1[11:6]), s_out[7:4];
+   S8_Box sbox8(XOR1[5:0]), s_out[3:0];
 
-   logic[47:0]			sbox_pre;
-   assign sbox_pre = sbox1[5:0];
-   assign sbox_pre = sbox2[11:6];
-   assign sbox_pre = sbox3[17:12];
-   assign sbox_pre = sbox4[23:28];
-   assign sbox_pre = sbox5[29:34];
-   assign sbox_pre = sbox6[35:40];
-   assign sbox_pre = sbox7[41:36];
-   assign sbox_pre = sbox8[47:42];
+   SF sf1(s_out, out_block);
 
 endmodule // Feistel
 
@@ -300,6 +341,9 @@ module round (inp_block, subkey, out_block);
    input logic [63:0]  inp_block;
    input logic [47:0]  subkey;
    output logic [63:0] out_block;
+
+   logic [27:0]left_block;
+   logic [27:0]right_block;
 
    
    

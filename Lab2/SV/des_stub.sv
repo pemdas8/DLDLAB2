@@ -28,7 +28,8 @@ module GenerateKeys (Key, SubKey1, SubKey2, SubKey3, SubKey4,
    output logic [47:0] SubKey15;
    output logic [47:0] SubKey16;
 
-   logic [27:0]left_block, [27:0]right_block;
+   logic [27:0]left_block;
+   logic [27:0]right_block;
    logic [27:0] A1,B1;
    logic [27:0] A2,B2;
    logic [27:0] A3,B3;
@@ -91,37 +92,37 @@ module GenerateKeys (Key, SubKey1, SubKey2, SubKey3, SubKey4,
    assign A9 = {A8[26:0], A8[27]};
    assign B9 = {B8[26:0], B8[27]};
 
-   PC2 round8(A9,B9,Subkey9);
+   PC2 round9(A9,B9,Subkey9);
 
    assign A10 = {A9[25:0], A8[27:26]};
    assign B10 = {B9[25:0], B8[27:26]};
 
-   PC2 round9(A10,B10,Subkey10);
+   PC2 round10(A10,B10,Subkey10);
 
    assign A11 = {A10[25:0], A10[27:26]};
    assign B11 = {B10[25:0], B10[27:26]};
 
-   PC2 round10(A11,B11,Subkey11);
+   PC2 round11(A11,B11,Subkey11);
 
    assign A12 = {A11[25:0], A11[27:26]};
    assign B12 = {B11[25:0], B11[27:26]};
 
-   PC2 round11(A12,B12,Subkey12);
+   PC2 round12(A12,B12,Subkey12);
 
    assign A13 = {A12[25:0], A12[27:26]};
    assign B13 = {B12[25:0], B12[27:26]};
 
-   PC2 round12(A13,B13,Subkey13);
+   PC2 round13(A13,B13,Subkey13);
 
    assign A14 = {A13[25:0], A13[27:26]};
    assign B14 = {B13[25:0], B13[27:26]};
 
-   PC2 round13(A14,B14,Subkey14);
+   PC2 round14(A14,B14,Subkey14);
 
    assign A15 = {A14[25:0], A14[27:26]};
    assign B15 = {B14[25:0], B14[27:26]};
 
-   PC2 round14(A15,B15,Subkey15);
+   PC2 round15(A15,B15,Subkey15);
 
    assign A16 = {A15[26:0], A15[27]};
    assign B16 = {B15[26:0], B15[27]};
@@ -207,55 +208,54 @@ module PC2 (left_block, right_block, subkey);
    logic[55:0] pc2_in;
    assign pc2_in = {left_block,right_block};
 
-   assign subkey[48]=pc2_in[55-14];  //fill in each subkey with specified bit
-   assign subkey=pc2_in[55-17];
-   assign subkey=pc2_in[55-11];
-   assign subkey=pc2_in[55-24];
-   assign subkey=pc2_in[55-1];
-   assign subkey=pc2_in[55-5];
-   assign subkey=pc2_in[55-3];
-   assign subkey=pc2_in[55-28];
-   assign subkey=pc2_in[55-15];
-   assign subkey=pc2_in[55-6];
-   assign subkey=pc2_in[55-21];
-   assign subkey=pc2_in[55-10];
-   assign subkey=pc2_in[55-23];
-   assign subkey=pc2_in[55-19];
-   assign subkey=pc2_in[55-12];
-   assign subkey=pc2_in[55-4];
-   assign subkey=pc2_in[55-26];
-   assign subkey=pc2_in[55-8];
-   assign subkey=pc2_in[55-16];
-   assign subkey=pc2_in[55-7];
-   assign subkey=pc2_in[55-27];
-   assign subkey=pc2_in[55-20];
-   assign subkey=pc2_in[55-13];
-   assign subkey=pc2_in[55-2];
-   assign subkey=pc2_in[55-41];
-   assign subkey=pc2_in[55-52];
-   assign subkey=pc2_in[55-31];
-   assign subkey=pc2_in[55-37];
-   assign subkey=pc2_in[55-47];
-   assign subkey=pc2_in[55-55];
-   assign subkey=pc2_in[55-30];
-   assign subkey=pc2_in[55-40];
-   assign subkey=pc2_in[55-51];
-   assign subkey=pc2_in[55-45];
-   assign subkey=pc2_in[55-33];
-   assign subkey=pc2_in[55-33];
-   assign subkey=pc2_in[55-48];
-   assign subkey=pc2_in[55-44];
-   assign subkey=pc2_in[55-49];
-   assign subkey=pc2_in[55-39];
-   assign subkey=pc2_in[55-56];
-   assign subkey=pc2_in[55-34];
-   assign subkey=pc2_in[55-53];
-   assign subkey=pc2_in[55-46];
-   assign subkey=pc2_in[55-42];
-   assign subkey=pc2_in[55-50];
-   assign subkey=pc2_in[55-36];
-   assign subkey=pc2_in[55-29];
-   assign subkey=pc2_in[55-32];
+   assign subkey[47]=pc2_in[55-14];  //fill in each subkey with specified bit
+   assign subkey[46]=pc2_in[55-17];
+   assign subkey[45]=pc2_in[55-11];
+   assign subkey[44]=pc2_in[55-24];
+   assign subkey[43]=pc2_in[55-1];
+   assign subkey[42]=pc2_in[55-5];
+   assign subkey[41]=pc2_in[55-3];
+   assign subkey[40]=pc2_in[55-28];
+   assign subkey[39]=pc2_in[55-15];
+   assign subkey[38]=pc2_in[55-6];
+   assign subkey[37]=pc2_in[55-21];
+   assign subkey[36]=pc2_in[55-10];
+   assign subkey[35]=pc2_in[55-23];
+   assign subkey[34]=pc2_in[55-19];
+   assign subkey[33]=pc2_in[55-12];
+   assign subkey[32]=pc2_in[55-4];
+   assign subkey[31]=pc2_in[55-26];
+   assign subkey[30]=pc2_in[55-8];
+   assign subkey[29]=pc2_in[55-16];
+   assign subkey[28]=pc2_in[55-7];
+   assign subkey[27]=pc2_in[55-27];
+   assign subkey[26]=pc2_in[55-20];
+   assign subkey[25]=pc2_in[55-13];
+   assign subkey[24]=pc2_in[55-2];
+   assign subkey[23]=pc2_in[55-41];
+   assign subkey[22]=pc2_in[55-52];
+   assign subkey[21]=pc2_in[55-31];
+   assign subkey[20]=pc2_in[55-37];
+   assign subkey[19]=pc2_in[55-47];
+   assign subkey[18]=pc2_in[55-55];
+   assign subkey[17]=pc2_in[55-30];
+   assign subkey[16]=pc2_in[55-40];
+   assign subkey[15]=pc2_in[55-51];
+   assign subkey[14]=pc2_in[55-45];
+   assign subkey[13]=pc2_in[55-33];
+   assign subkey[12]=pc2_in[55-48];
+   assign subkey[11]=pc2_in[55-44];
+   assign subkey[10]=pc2_in[55-49];
+   assign subkey[9]=pc2_in[55-39];
+   assign subkey[8]=pc2_in[55-56];
+   assign subkey[7]=pc2_in[55-34];
+   assign subkey[6]=pc2_in[55-53];
+   assign subkey[5]=pc2_in[55-46];
+   assign subkey[4]=pc2_in[55-42];
+   assign subkey[3]=pc2_in[55-50];
+   assign subkey[2]=pc2_in[55-36];
+   assign subkey[1]=pc2_in[55-29];
+   assign subkey[0]=pc2_in[55-32];
 
 
 
@@ -268,40 +268,40 @@ module SF (inp_block, out_block);
    output logic [31:0] out_block;
 
    logic [31:0]sf_in;
-   feistel sf1(inp_block, sf_in);
+   assign sf_in = inp_block;
 
-   assign out_block=sf_in[32-16];  //fill out out_block with specified bit to each assignment
-   assign out_block=sf_in[32-7];
-   assign out_block=sf_in[32-20];
-   assign out_block=sf_in[32-21];
-   assign out_block=sf_in[32-29];
-   assign out_block=sf_in[32-12];
-   assign out_block=sf_in[32-28];
-   assign out_block=sf_in[32-17];
-   assign out_block=sf_in[32-1];
-   assign out_block=sf_in[32-15];
-   assign out_block=sf_in[32-23];
-   assign out_block=sf_in[32-26];
-   assign out_block=sf_in[32-5];
-   assign out_block=sf_in[32-18];
-   assign out_block=sf_in[32-31];
-   assign out_block=sf_in[32-10];
-   assign out_block=sf_in[32-2];
-   assign out_block=sf_in[32-8];
-   assign out_block=sf_in[32-24];
-   assign out_block=sf_in[32-14];
-   assign out_block=sf_in[32-32];
-   assign out_block=sf_in[32-27];
-   assign out_block=sf_in[32-3];
-   assign out_block=sf_in[32-9];
-   assign out_block=sf_in[32-19];
-   assign out_block=sf_in[32-13];
-   assign out_block=sf_in[32-30];
-   assign out_block=sf_in[32-6];
-   assign out_block=sf_in[32-22];
-   assign out_block=sf_in[32-11];
-   assign out_block=sf_in[32-4];
-   assign out_block=sf_in[32-25];
+   assign out_block[31]=sf_in[32-16];  
+   assign out_block[30]=sf_in[32-7];
+   assign out_block[29]=sf_in[32-20];
+   assign out_block[28]=sf_in[32-21];
+   assign out_block[27]=sf_in[32-29];
+   assign out_block[26]=sf_in[32-12];
+   assign out_block[25]=sf_in[32-28];
+   assign out_block[24]=sf_in[32-17];
+   assign out_block[23]=sf_in[32-1];
+   assign out_block[22]=sf_in[32-15];
+   assign out_block[21]=sf_in[32-23];
+   assign out_block[20]=sf_in[32-26];
+   assign out_block[19]=sf_in[32-5];
+   assign out_block[18]=sf_in[32-18];
+   assign out_block[17]=sf_in[32-31];
+   assign out_block[16]=sf_in[32-10];
+   assign out_block[15]=sf_in[32-2];
+   assign out_block[14]=sf_in[32-8];
+   assign out_block[13]=sf_in[32-24];
+   assign out_block[12]=sf_in[32-14];
+   assign out_block[11]=sf_in[32-32];
+   assign out_block[10]=sf_in[32-27];
+   assign out_block[9]=sf_in[32-3];
+   assign out_block[8]=sf_in[32-9];
+   assign out_block[7]=sf_in[32-19];
+   assign out_block[6]=sf_in[32-13];
+   assign out_block[5]=sf_in[32-30];
+   assign out_block[4]=sf_in[32-6];
+   assign out_block[3]=sf_in[32-22];
+   assign out_block[2]=sf_in[32-11];
+   assign out_block[1]=sf_in[32-4];
+   assign out_block[0]=sf_in[32-25];
 
 endmodule // SF
 
@@ -311,54 +311,54 @@ module EF (inp_block, out_block);
    input logic [31:0] inp_block;
    output logic [47:0] out_block;
 
-   assign out_block = inp_block[32-32];
-   assign out_block = inp_block[32-1];
-   assign out_block = inp_block[32-2];
-   assign out_block = inp_block[32-3];
-   assign out_block = inp_block[32-4];
-   assign out_block = inp_block[32-5];
-   assign out_block = inp_block[32-4];
-   assign out_block = inp_block[32-5];
-   assign out_block = inp_block[32-6];
-   assign out_block = inp_block[32-7];
-   assign out_block = inp_block[32-8];
-   assign out_block = inp_block[32-9];
-   assign out_block = inp_block[32-8];
-   assign out_block = inp_block[32-9];
-   assign out_block = inp_block[32-10];
-   assign out_block = inp_block[32-11];
-   assign out_block = inp_block[32-12];
-   assign out_block = inp_block[32-13];
-   assign out_block = inp_block[32-12];
-   assign out_block = inp_block[32-13];
-   assign out_block = inp_block[32-14];
-   assign out_block = inp_block[32-15];
-   assign out_block = inp_block[32-16];
-   assign out_block = inp_block[32-17];
-   assign out_block = inp_block[32-16];
-   assign out_block = inp_block[32-17];
-   assign out_block = inp_block[32-18];
-   assign out_block = inp_block[32-19];
-   assign out_block = inp_block[32-20];
-   assign out_block = inp_block[32-21];
-   assign out_block = inp_block[32-20];
-   assign out_block = inp_block[32-21];
-   assign out_block = inp_block[32-22];
-   assign out_block = inp_block[32-23];
-   assign out_block = inp_block[32-24];
-   assign out_block = inp_block[32-25];
-   assign out_block = inp_block[32-24];
-   assign out_block = inp_block[32-25];
-   assign out_block = inp_block[32-26];
-   assign out_block = inp_block[32-27];
-   assign out_block = inp_block[32-28];
-   assign out_block = inp_block[32-29];
-   assign out_block = inp_block[32-28];
-   assign out_block = inp_block[32-29];
-   assign out_block = inp_block[32-30];
-   assign out_block = inp_block[32-31];
-   assign out_block = inp_block[32-32];
-   assign out_block = inp_block[32-1];
+   assign out_block[47] = inp_block[32-32];
+   assign out_block[46] = inp_block[32-1];
+   assign out_block[45] = inp_block[32-2];
+   assign out_block[44] = inp_block[32-3];
+   assign out_block[43] = inp_block[32-4];
+   assign out_block[42] = inp_block[32-5];
+   assign out_block[41] = inp_block[32-4];
+   assign out_block[40] = inp_block[32-5];
+   assign out_block[39] = inp_block[32-6];
+   assign out_block[38] = inp_block[32-7];
+   assign out_block[37] = inp_block[32-8];
+   assign out_block[36] = inp_block[32-9];
+   assign out_block[35] = inp_block[32-8];
+   assign out_block[34] = inp_block[32-9];
+   assign out_block[33] = inp_block[32-10];
+   assign out_block[32] = inp_block[32-11];
+   assign out_block[31] = inp_block[32-12];
+   assign out_block[30] = inp_block[32-13];
+   assign out_block[29] = inp_block[32-12];
+   assign out_block[28] = inp_block[32-13];
+   assign out_block[27] = inp_block[32-14];
+   assign out_block[26] = inp_block[32-15];
+   assign out_block[25] = inp_block[32-16];
+   assign out_block[24] = inp_block[32-17];
+   assign out_block[23] = inp_block[32-16];
+   assign out_block[22] = inp_block[32-17];
+   assign out_block[21] = inp_block[32-18];
+   assign out_block[20] = inp_block[32-19];
+   assign out_block[19] = inp_block[32-20];
+   assign out_block[18] = inp_block[32-21];
+   assign out_block[17] = inp_block[32-20];
+   assign out_block[16] = inp_block[32-21];
+   assign out_block[15] = inp_block[32-22];
+   assign out_block[14] = inp_block[32-23];
+   assign out_block[13] = inp_block[32-24];
+   assign out_block[12] = inp_block[32-25];
+   assign out_block[11] = inp_block[32-24];
+   assign out_block[10] = inp_block[32-25];
+   assign out_block[9] = inp_block[32-26];
+   assign out_block[8] = inp_block[32-27];
+   assign out_block[7] = inp_block[32-28];
+   assign out_block[6] = inp_block[32-29];
+   assign out_block[5] = inp_block[32-28];
+   assign out_block[4] = inp_block[32-29];
+   assign out_block[3] = inp_block[32-30];
+   assign out_block[2] = inp_block[32-31];
+   assign out_block[1] = inp_block[32-32];
+   assign out_block[0] = inp_block[32-1];
 
 endmodule // EF
 

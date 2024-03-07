@@ -13,204 +13,14 @@
 # //
 # do des.do
 # Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 16:24:07 on Mar 06,2024
+# Start time: 10:14:51 on Mar 07,2024
 # vlog -reportprogress 300 des_stub.sv tb_des.sv 
 # -- Compiling module GenerateKeys
-# ** Error: (vlog-13069) des_stub.sv(31): near "[": syntax error, unexpected '[', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
-# ** Error: des_stub.sv(94): (vlog-13282) 'round8' already declared in this scope.
 # -- Compiling module PC1
-# ** Error (suppressible): des_stub.sv(141): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(142): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(143): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(144): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(145): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(146): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(147): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(148): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(149): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(150): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(151): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(152): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(153): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(154): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(155): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(156): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(157): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(158): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(159): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(160): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(161): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(162): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(163): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(164): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(165): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(166): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(167): (vlog-7045) 'left_block[27]' is driven by more than one continuous assignment. See des_stub.sv(140).
-# ** Error (suppressible): des_stub.sv(171): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(172): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(173): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(174): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(175): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(176): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(177): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(178): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(179): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(180): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(181): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(182): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(183): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(184): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(185): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(186): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(187): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(188): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(189): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(190): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(191): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(192): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(193): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(194): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(195): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(196): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
-# ** Error (suppressible): des_stub.sv(197): (vlog-7045) 'right_block[27]' is driven by more than one continuous assignment. See des_stub.sv(170).
 # -- Compiling module PC2
-# ** Error (suppressible): des_stub.sv(211): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(212): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(213): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(214): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(215): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(216): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(217): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(218): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(219): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(220): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(221): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(222): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(223): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(224): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(225): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(226): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(227): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(228): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(229): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(230): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(231): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(232): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(233): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(234): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(235): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(236): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(237): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(238): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(239): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(240): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(241): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(242): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(243): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(244): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(245): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(246): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(247): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(248): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(249): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(250): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(251): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(252): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(253): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(254): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(255): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(256): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(257): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
-# ** Error (suppressible): des_stub.sv(258): (vlog-7045) 'subkey' is driven by more than one continuous assignment. See des_stub.sv(210).
 # -- Compiling module SF
-# ** Error (suppressible): des_stub.sv(274): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(275): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(276): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(277): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(278): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(279): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(280): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(281): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(282): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(283): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(284): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(285): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(286): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(287): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(288): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(289): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(290): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(291): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(292): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(293): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(294): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(295): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(296): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(297): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(298): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(299): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(300): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(301): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(302): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(303): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
-# ** Error (suppressible): des_stub.sv(304): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(273).
 # -- Compiling module EF
-# ** Error (suppressible): des_stub.sv(315): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(316): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(317): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(318): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(319): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(320): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(321): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(322): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(323): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(324): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(325): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(326): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(327): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(328): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(329): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(330): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(331): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(332): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(333): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(334): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(335): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(336): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(337): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(338): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(339): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(340): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(341): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(342): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(343): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(344): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(345): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(346): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(347): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(348): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(349): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(350): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(351): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(352): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(353): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(354): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(355): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(356): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(357): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(358): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(359): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(360): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
-# ** Error (suppressible): des_stub.sv(361): (vlog-7045) 'out_block' is driven by more than one continuous assignment. See des_stub.sv(314).
 # -- Compiling module feistel
-# ** Error: (vlog-13069) des_stub.sv(378): near ";": syntax error, unexpected ';', expecting '('.
-# ** Error: (vlog-13069) des_stub.sv(379): near ";": syntax error, unexpected ';', expecting '('.
-# ** Error: (vlog-13069) des_stub.sv(380): near ";": syntax error, unexpected ';', expecting '('.
-# ** Error: (vlog-13069) des_stub.sv(381): near ";": syntax error, unexpected ';', expecting '('.
-# ** Error: (vlog-13069) des_stub.sv(382): near ";": syntax error, unexpected ';', expecting '('.
-# ** Error: (vlog-13069) des_stub.sv(383): near ";": syntax error, unexpected ';', expecting '('.
-# ** Error: (vlog-13069) des_stub.sv(384): near ";": syntax error, unexpected ';', expecting '('.
-# ** Error: (vlog-13069) des_stub.sv(385): near ";": syntax error, unexpected ';', expecting '('.
 # -- Compiling module round
 # -- Compiling module IP
 # -- Compiling module FP
@@ -223,24 +33,172 @@
 # -- Compiling module S7_Box
 # -- Compiling module S8_Box
 # -- Compiling module DES
-# ** Error: des_stub.sv(1227): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1229): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1231): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1233): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1235): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1237): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1239): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1241): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1243): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1245): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1247): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1249): (vlog-13282) 'r3' already declared in this scope.
-# ** Error: des_stub.sv(1251): (vlog-13282) 'r3' already declared in this scope.
 # -- Compiling module stimulus
-# End time: 16:24:07 on Mar 06,2024, Elapsed time: 0:00:00
-# Errors: 203, Warnings: 0
-# ** Error: C:/modeltech64_2021.3/win64/vlog failed.
-# Error in macro ./des.do line 26
-# C:/modeltech64_2021.3/win64/vlog failed.
-#     while executing
-# "vlog des_stub.sv tb_des.sv"
+# 
+# Top level modules:
+# 	stimulus
+# End time: 10:14:51 on Mar 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 10:14:51 on Mar 07,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.DES(fast)
+# Loading work.GenerateKeys(fast)
+# Loading work.PC1(fast)
+# Loading work.PC2(fast)
+# Loading work.IP(fast)
+# Loading work.round(fast)
+# Loading work.feistel(fast)
+# Loading work.EF(fast)
+# Loading work.S1_Box(fast)
+# Loading work.S2_Box(fast)
+# Loading work.S3_Box(fast)
+# Loading work.S4_Box(fast)
+# Loading work.S5_Box(fast)
+# Loading work.S6_Box(fast)
+# Loading work.S7_Box(fast)
+# Loading work.S8_Box(fast)
+# Loading work.SF(fast)
+# Loading work.FP(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'key'. The port definition is at: des_stub.sv(134).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/pc1round File: des_stub.sv Line: 50
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round6 File: des_stub.sv Line: 80
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round7 File: des_stub.sv Line: 85
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round8 File: des_stub.sv Line: 90
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round9 File: des_stub.sv Line: 95
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round10 File: des_stub.sv Line: 100
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round11 File: des_stub.sv Line: 105
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round12 File: des_stub.sv Line: 110
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round13 File: des_stub.sv Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round14 File: des_stub.sv Line: 120
+# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round15 File: des_stub.sv Line: 125
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r1/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r1/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r1/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r2/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r2/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r2/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r3/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r3/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r3/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r4/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r4/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r4/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r5/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r5/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r5/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r6/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r6/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r6/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r7/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r7/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r7/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r8/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r8/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r8/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r9/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r9/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r9/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r10/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r10/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r10/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r11/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r11/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r11/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r12/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r12/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r12/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r13/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r13/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r13/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r14/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r14/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r14/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r15/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r15/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r15/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r16/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r16/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r16/pc2_in1 File: des_stub.sv Line: 411
+# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
+# .main_pane.wave.interior.cs.body.pw.wf
+#          8 tests completed with          8 errors
+# ** Note: $finish    : tb_des.sv(61)
+#    Time: 75 ns  Iteration: 1  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb_des.sv line 61

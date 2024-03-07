@@ -36,18 +36,18 @@ module GenerateKeys (Key, SubKey1, SubKey2, SubKey3, SubKey4,
    logic [27:0] A4,B4;
    logic [27:0] A5,B5;
    logic [27:0] A6,B6;
-   logic [27:0]	A7,B7;
+   logic [27:0] A7,B7;
    logic [27:0] A8,B8;
    logic [27:0] A9,B9;
    logic [27:0] A10,B10;
    logic [27:0] A11,B11;
    logic [27:0] A12,B12;
    logic [27:0] A13,B13;
-   logic [27:0]	A14,B14;
-   logic [27:0]	A15,B15;
-   logic [27:0]	A16,B16;
+   logic [27:0] A14,B14;
+   logic [27:0] A15,B15;
+   logic [27:0] A16,B16;
 
-   PC1 pc1round(key,left_block,right_block);
+   PC1 round0(Key,left_block,right_block);
    
    assign A1 = {left_block[26:0], left_block[27]};
    assign B1 = {right_block[26:0], right_block[27]};
@@ -77,55 +77,57 @@ module GenerateKeys (Key, SubKey1, SubKey2, SubKey3, SubKey4,
    assign A6 = {A5[25:0], A5[27:26]};
    assign B6 = {B5[25:0], B5[27:26]};
 
-   PC2 round6(A6,B6,Subkey6);
+   PC2 round6(A6,B6,SubKey6);
 
    assign A7 = {A6[25:0], A6[27:26]};
    assign B7 = {B6[25:0], B6[27:26]};
 
-   PC2 round7(A7,B7,Subkey7);
+   PC2 round7(A7,B7,SubKey7);
 
    assign A8 = {A7[25:0], A7[27:26]};
    assign B8 = {B7[25:0], B7[27:26]};
 
-   PC2 round8(A8,B8,Subkey8);
+   PC2 round8(A8,B8,SubKey8);
    
    assign A9 = {A8[26:0], A8[27]};
    assign B9 = {B8[26:0], B8[27]};
 
-   PC2 round9(A9,B9,Subkey9);
+   PC2 round9(A9,B9,SubKey9);
 
-   assign A10 = {A9[25:0], A8[27:26]};
-   assign B10 = {B9[25:0], B8[27:26]};
+   assign A10 = {A9[25:0], A9[27:26]};
+   assign B10 = {B9[25:0], B9[27:26]};
 
-   PC2 round10(A10,B10,Subkey10);
+   PC2 round10(A10,B10,SubKey10);
 
    assign A11 = {A10[25:0], A10[27:26]};
    assign B11 = {B10[25:0], B10[27:26]};
 
-   PC2 round11(A11,B11,Subkey11);
+   PC2 round11(A11,B11,SubKey11);
 
    assign A12 = {A11[25:0], A11[27:26]};
    assign B12 = {B11[25:0], B11[27:26]};
 
-   PC2 round12(A12,B12,Subkey12);
+   PC2 round12(A12,B12,SubKey12);
 
    assign A13 = {A12[25:0], A12[27:26]};
    assign B13 = {B12[25:0], B12[27:26]};
 
-   PC2 round13(A13,B13,Subkey13);
+   PC2 round13(A13,B13,SubKey13);
 
    assign A14 = {A13[25:0], A13[27:26]};
    assign B14 = {B13[25:0], B13[27:26]};
 
-   PC2 round14(A14,B14,Subkey14);
+   PC2 round14(A14,B14,SubKey14);
 
    assign A15 = {A14[25:0], A14[27:26]};
    assign B15 = {B14[25:0], B14[27:26]};
 
-   PC2 round15(A15,B15,Subkey15);
+   PC2 round15(A15,B15,SubKey15);
 
    assign A16 = {A15[26:0], A15[27]};
    assign B16 = {B15[26:0], B15[27]};
+
+   PC2 round16(A16,B16,SubKey16);
 
 
 
@@ -205,57 +207,57 @@ module PC2 (left_block, right_block, subkey);
    input logic [27:0] right_block;
    output logic [47:0] subkey;
 
-   logic[55:0] pc2_in;
+   logic [55:0]pc2_in;
    assign pc2_in = {left_block,right_block};
 
-   assign subkey[47]=pc2_in[55-14];  //fill in each subkey with specified bit
-   assign subkey[46]=pc2_in[55-17];
-   assign subkey[45]=pc2_in[55-11];
-   assign subkey[44]=pc2_in[55-24];
-   assign subkey[43]=pc2_in[55-1];
-   assign subkey[42]=pc2_in[55-5];
-   assign subkey[41]=pc2_in[55-3];
-   assign subkey[40]=pc2_in[55-28];
-   assign subkey[39]=pc2_in[55-15];
-   assign subkey[38]=pc2_in[55-6];
-   assign subkey[37]=pc2_in[55-21];
-   assign subkey[36]=pc2_in[55-10];
-   assign subkey[35]=pc2_in[55-23];
-   assign subkey[34]=pc2_in[55-19];
-   assign subkey[33]=pc2_in[55-12];
-   assign subkey[32]=pc2_in[55-4];
-   assign subkey[31]=pc2_in[55-26];
-   assign subkey[30]=pc2_in[55-8];
-   assign subkey[29]=pc2_in[55-16];
-   assign subkey[28]=pc2_in[55-7];
-   assign subkey[27]=pc2_in[55-27];
-   assign subkey[26]=pc2_in[55-20];
-   assign subkey[25]=pc2_in[55-13];
-   assign subkey[24]=pc2_in[55-2];
-   assign subkey[23]=pc2_in[55-41];
-   assign subkey[22]=pc2_in[55-52];
-   assign subkey[21]=pc2_in[55-31];
-   assign subkey[20]=pc2_in[55-37];
-   assign subkey[19]=pc2_in[55-47];
-   assign subkey[18]=pc2_in[55-55];
-   assign subkey[17]=pc2_in[55-30];
-   assign subkey[16]=pc2_in[55-40];
-   assign subkey[15]=pc2_in[55-51];
-   assign subkey[14]=pc2_in[55-45];
-   assign subkey[13]=pc2_in[55-33];
-   assign subkey[12]=pc2_in[55-48];
-   assign subkey[11]=pc2_in[55-44];
-   assign subkey[10]=pc2_in[55-49];
-   assign subkey[9]=pc2_in[55-39];
-   assign subkey[8]=pc2_in[55-56];
-   assign subkey[7]=pc2_in[55-34];
-   assign subkey[6]=pc2_in[55-53];
-   assign subkey[5]=pc2_in[55-46];
-   assign subkey[4]=pc2_in[55-42];
-   assign subkey[3]=pc2_in[55-50];
-   assign subkey[2]=pc2_in[55-36];
-   assign subkey[1]=pc2_in[55-29];
-   assign subkey[0]=pc2_in[55-32];
+   assign subkey[47]=pc2_in[56-14];  
+   assign subkey[46]=pc2_in[56-17];
+   assign subkey[45]=pc2_in[56-11];
+   assign subkey[44]=pc2_in[56-24];
+   assign subkey[43]=pc2_in[56-1];
+   assign subkey[42]=pc2_in[56-5];
+   assign subkey[41]=pc2_in[56-3];
+   assign subkey[40]=pc2_in[56-28];
+   assign subkey[39]=pc2_in[56-15];
+   assign subkey[38]=pc2_in[56-6];
+   assign subkey[37]=pc2_in[56-21];
+   assign subkey[36]=pc2_in[56-10];
+   assign subkey[35]=pc2_in[56-23];
+   assign subkey[34]=pc2_in[56-19];
+   assign subkey[33]=pc2_in[56-12];
+   assign subkey[32]=pc2_in[56-4];
+   assign subkey[31]=pc2_in[56-26];
+   assign subkey[30]=pc2_in[56-8];
+   assign subkey[29]=pc2_in[56-16];
+   assign subkey[28]=pc2_in[56-7];
+   assign subkey[27]=pc2_in[56-27];
+   assign subkey[26]=pc2_in[56-20];
+   assign subkey[25]=pc2_in[56-13];
+   assign subkey[24]=pc2_in[56-2];
+   assign subkey[23]=pc2_in[56-41];
+   assign subkey[22]=pc2_in[56-52];
+   assign subkey[21]=pc2_in[56-31];
+   assign subkey[20]=pc2_in[56-37];
+   assign subkey[19]=pc2_in[56-47];
+   assign subkey[18]=pc2_in[56-55];
+   assign subkey[17]=pc2_in[56-30];
+   assign subkey[16]=pc2_in[56-40];
+   assign subkey[15]=pc2_in[56-51];
+   assign subkey[14]=pc2_in[56-45];
+   assign subkey[13]=pc2_in[56-33];
+   assign subkey[12]=pc2_in[56-48];
+   assign subkey[11]=pc2_in[56-44];
+   assign subkey[10]=pc2_in[56-49];
+    assign subkey[9]=pc2_in[56-39];
+    assign subkey[8]=pc2_in[56-56];
+    assign subkey[7]=pc2_in[56-34];
+    assign subkey[6]=pc2_in[56-53];
+    assign subkey[5]=pc2_in[56-46];
+    assign subkey[4]=pc2_in[56-42];
+    assign subkey[3]=pc2_in[56-50];
+    assign subkey[2]=pc2_in[56-36];
+    assign subkey[1]=pc2_in[56-29];
+    assign subkey[0]=pc2_in[56-32];
 
 
 
@@ -408,7 +410,7 @@ module round (inp_block, subkey, out_block);
    assign XOR2 = left_block ^ feistel_out;
    assign out_block[31:0]= XOR2;
 
-   PC2 pc2_in1(XOR2, out_block);
+   //PC2 pc2_in1(XOR2, out_block);
 
 endmodule // round1
 
@@ -1189,6 +1191,29 @@ module DES (input logic [63:0] key, input logic [63:0] plaintext,
    logic [47:0] 	SubKey5, SubKey6, SubKey7, SubKey8;   
    logic [47:0] 	SubKey9, SubKey10, SubKey11, SubKey12;
    logic [47:0] 	SubKey13, SubKey14, SubKey15, SubKey16;
+   
+   logic [47:0] 	PassKey1, PassKey2, PassKey3, PassKey4;   
+   logic [47:0] 	PassKey5, PassKey6, PassKey7, PassKey8;   
+   logic [47:0] 	PassKey9, PassKey10, PassKey11, PassKey12;
+   logic [47:0] 	PassKey13, PassKey14, PassKey15, PassKey16;
+
+   assign PassKey1 = (encrypt) ? SubKey1 : SubKey16;
+   assign PassKey2 = (encrypt) ? SubKey2 : SubKey15;
+   assign PassKey3 = (encrypt) ? SubKey3 : SubKey14;
+   assign PassKey4 = (encrypt) ? SubKey4 : SubKey13;
+   assign PassKey5 = (encrypt) ? SubKey5 : SubKey12;
+   assign PassKey6 = (encrypt) ? SubKey6 : SubKey11;
+   assign PassKey7 = (encrypt) ? SubKey7 : SubKey10;
+   assign PassKey8 = (encrypt) ? SubKey8 : SubKey9;
+   assign PassKey9 = (encrypt) ? SubKey9 : SubKey8;
+   assign PassKey10 = (encrypt) ? SubKey10 : SubKey7;
+   assign PassKey11 = (encrypt) ? SubKey11 : SubKey6;
+   assign PassKey12 = (encrypt) ? SubKey12 : SubKey5;
+   assign PassKey13 = (encrypt) ? SubKey13 : SubKey4;
+   assign PassKey14 = (encrypt) ? SubKey14 : SubKey3;
+   assign PassKey15 = (encrypt) ? SubKey15 : SubKey2;
+   assign PassKey16 = (encrypt) ? SubKey16 : SubKey1;
+
 
    logic [63:0] 	ip_out;   
    logic [63:0] 	r1_out;
@@ -1218,37 +1243,37 @@ module DES (input logic [63:0] key, input logic [63:0] plaintext,
    // Initial Permutation (IP)
    IP b1 (plaintext, ip_out);
    // round 1
-   round r1(ip_out, SubKey1, r1_out);
+   round r1(ip_out, PassKey1, r1_out);
    // round 2
-   round r2(r1_out, SubKey2, r2_out);
+   round r2(r1_out, PassKey2, r2_out);
    // round 3
-   round r3(r2_out, SubKey3, r3_out);
+   round r3(r2_out, PassKey3, r3_out);
    // round K
-   round r4(r3_out, SubKey4, r4_out);   
+   round r4(r3_out, PassKey4, r4_out);   
    // round K
-   round r5(r4_out, SubKey5, r5_out);
+   round r5(r4_out, PassKey5, r5_out);
    // round K
-   round r6(r5_out, SubKey6, r6_out);
+   round r6(r5_out, PassKey6, r6_out);
    // round K
-   round r7(r6_out, SubKey7, r7_out);
+   round r7(r6_out, PassKey7, r7_out);
    // round K
-   round r8(r7_out, SubKey8, r8_out);
+   round r8(r7_out, PassKey8, r8_out);
    // round 9
-   round r9(r8_out, SubKey9, r9_out);
+   round r9(r8_out, PassKey9, r9_out);
    // round 10
-   round r10(r9_out, SubKey10, r10_out);
+   round r10(r9_out, PassKey10, r10_out);
    // round 11
-   round r11(r10_out, SubKey11, r11_out);
+   round r11(r10_out, PassKey11, r11_out);
    // round 12
-   round r12(r11_out, SubKey12, r12_out);
+   round r12(r11_out, PassKey12, r12_out);
    // round 13
-   round r13(r12_out, SubKey13, r13_out);
+   round r13(r12_out, PassKey13, r13_out);
    // round 14
-   round r14(r13_out, SubKey14, r14_out);
+   round r14(r13_out, PassKey14, r14_out);
    // round 15
-   round r15(r14_out, SubKey15, r15_out);
+   round r15(r14_out, PassKey15, r15_out);
    // round 16
-   round r16(r15_out, SubKey16, r16_out);
+   round r16(r15_out, PassKey16, r16_out);
 
    // Final Permutation (IP^{-1}) (swap output of round16)
    FP FP({r16_out[31:0], r16_out[63:32]}, ciphertext);

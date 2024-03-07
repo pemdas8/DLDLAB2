@@ -13,7 +13,7 @@
 # //
 # do des.do
 # Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 10:14:51 on Mar 07,2024
+# Start time: 16:51:10 on Mar 07,2024
 # vlog -reportprogress 300 des_stub.sv tb_des.sv 
 # -- Compiling module GenerateKeys
 # -- Compiling module PC1
@@ -37,10 +37,10 @@
 # 
 # Top level modules:
 # 	stimulus
-# End time: 10:14:51 on Mar 07,2024, Elapsed time: 0:00:00
+# End time: 16:51:11 on Mar 07,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 10:14:51 on Mar 07,2024
+# Start time: 16:51:11 on Mar 07,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
 # Loading work.stimulus(fast)
@@ -62,142 +62,8 @@
 # Loading work.S8_Box(fast)
 # Loading work.SF(fast)
 # Loading work.FP(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (1) for port 'key'. The port definition is at: des_stub.sv(134).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/pc1round File: des_stub.sv Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round6 File: des_stub.sv Line: 80
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round7 File: des_stub.sv Line: 85
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round8 File: des_stub.sv Line: 90
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round9 File: des_stub.sv Line: 95
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round10 File: des_stub.sv Line: 100
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round11 File: des_stub.sv Line: 105
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round12 File: des_stub.sv Line: 110
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round13 File: des_stub.sv Line: 115
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round14 File: des_stub.sv Line: 120
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'subkey'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/k1/round15 File: des_stub.sv Line: 125
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r1/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r1/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r1/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r2/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r2/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r2/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r3/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r3/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r3/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r4/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r4/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r4/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r5/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r5/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r5/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r6/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r6/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r6/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r7/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r7/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r7/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r8/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r8/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r8/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r9/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r9/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r9/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r10/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r10/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r10/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r11/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r11/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r11/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r12/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r12/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r12/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r13/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r13/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r13/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r14/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r14/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r14/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r15/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r15/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r15/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pc2_in1'.  Expected 3, found 2.
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r16/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'left_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r16/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3015) [PCDPC] - Port size (28) does not match connection size (64) for port 'right_block'. The port definition is at: des_stub.sv(202).
-#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/r16/pc2_in1 File: des_stub.sv Line: 411
-# ** Warning: (vsim-3722) des_stub.sv(411): [TFMPC] - Missing connection for port 'subkey'.
 # .main_pane.wave.interior.cs.body.pw.wf
-#          8 tests completed with          8 errors
+#          8 tests completed with          0 errors
 # ** Note: $finish    : tb_des.sv(61)
 #    Time: 75 ns  Iteration: 1  Instance: /stimulus
 # 1

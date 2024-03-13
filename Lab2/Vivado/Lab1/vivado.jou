@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Mar 13 15:34:51 2024
+# Process ID: 22516
+# Current directory: C:/Users/zafranc/Downloads/DLDLAB2/Lab2/Vivado/Lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2140 C:\Users\zafranc\Downloads\DLDLAB2\Lab2\Vivado\Lab1\Lab1.xpr
+# Log file: C:/Users/zafranc/Downloads/DLDLAB2/Lab2/Vivado/Lab1/vivado.log
+# Journal file: C:/Users/zafranc/Downloads/DLDLAB2/Lab2/Vivado/Lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/zafranc/Downloads/DLDLAB2/Lab2/Vivado/Lab1/Lab1.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/zafranc/Downloads/DLDLAB2/Lab2/SV/ha.sv C:/Users/zafranc/Downloads/DLDLAB2/Lab2/SV/tb_des.sv C:/Users/zafranc/Downloads/DLDLAB2/Lab2/SV/fa.sv C:/Users/zafranc/Downloads/DLDLAB2/Lab2/SV/rca8.sv C:/Users/zafranc/Downloads/DLDLAB2/Lab2/SV/des_stub.sv C:/Users/zafranc/Downloads/DLDLAB2/Lab2/SV/test_rca8.sv}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+open_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/zafranc/Downloads/DLDLAB2/Lab2/Vivado/Lab1/Lab1.runs/impl_1/top_demo.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+update_compile_order -fileset sources_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/zafranc/Downloads/DLDLAB2/Lab2/Vivado/Lab1/Lab1.runs/impl_1/top_demo.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+update_compile_order -fileset sources_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/zafranc/Downloads/DLDLAB2/Lab2/Vivado/Lab1/Lab1.runs/impl_1/top_demo.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/zafranc/Downloads/DLDLAB2/Lab2/Vivado/Lab1/Lab1.runs/impl_1/top_demo.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1

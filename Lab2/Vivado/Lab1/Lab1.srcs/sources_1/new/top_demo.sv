@@ -43,17 +43,38 @@ module top_demo
   logic [16:0] CURRENT_COUNT;
   logic [16:0] NEXT_COUNT;
   logic        smol_clk;
+  logic [63:0] key = 64'h433E4529462A4A62;
+  logic [63:0] plaintext = 64'h2579DB866C0F528C;
+  logic [63:0] cyphertext = 64'hECB54739A1832EC5;
+  logic [1:0] encrypt = 1'b1;
+  logic [15:0] out;
   
-  // Place TicTacToe instantiation here
+  DES run(key, plaintext, encrypt);
+  
+  always@(key,plaintext,cyphertext)
+  begin
+  case(sw[3:0])
+    4'b0000 : out=key[15:0];
+    4'b0001 : out=key[31:16];
+    4'b0011 : out=key[47:32];
+    4'b0111 : out=key[63:48];
+    endcase
+  case(sw[7:4])
+    4'b1111 : out=plaintext[15:0];
+    4'b1100 : out=plaintext[31:16];
+    4'b1110 : out=plaintext[47:31];
+    4'b1100 : out=plaintext[63:48];
+    endcase
+    end
   
   // 7-segment display
   segment_driver driver(
   .clk(smol_clk),
   .rst(btn[3]),
   .digit0(sw[3:0]),
-  .digit1(4'b0111),
+  .digit1(sw[3:0]),
   .digit2(sw[7:4]),
-  .digit3(4'b1111),
+  .digit3(sw[7:4]),
   .decimals({1'b0, btn[2:0]}),
   .segment_cathodes({sseg_dp, sseg_cg, sseg_cf, sseg_ce, sseg_cd, sseg_cc, sseg_cb, sseg_ca}),
   .digit_anodes(sseg_an)
@@ -61,7 +82,7 @@ module top_demo
 
 // Register logic storing clock counts
   always@(posedge sysclk_125mhz)
-  begin
+  begin  
     if(btn[3])
       CURRENT_COUNT = 17'h00000;
     else
